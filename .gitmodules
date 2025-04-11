@@ -1,0 +1,4 @@
+[submodule "Engine/DaggerEngine"]
+	path = Engine/DaggerEngine
+	url = https://github.com/BenDol/DaggerEngine-UE.git
+	branch = master
