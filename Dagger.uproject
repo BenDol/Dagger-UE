@@ -17,6 +17,13 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "DaggerEngine",
+			"Enabled": true
 		}
+	],
+	"AdditionalPluginDirectories": [
+		"Engine/DaggerEngine/Plugins"
 	]
 }
