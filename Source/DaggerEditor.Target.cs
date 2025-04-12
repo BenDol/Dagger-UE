@@ -10,6 +10,6 @@ public class DaggerEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
-		ExtraModuleNames.Add("Dagger");
+		ExtraModuleNames.Add("DaggerGame");
 	}
 }

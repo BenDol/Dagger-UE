@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "Dagger",
+			"Name": "DaggerGame",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
@@ -19,7 +19,11 @@
 			]
 		},
 		{
-			"Name": "DaggerEngine",
+			"Name": "DaggerCore",
+			"Enabled": true
+		},
+		{
+			"Name": "DaggerUI",
 			"Enabled": true
 		}
 	],
