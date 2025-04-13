@@ -1,0 +1,23 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# Settings for this module
+[*]
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+[*.{json,css,html,md,uplugin,uproject}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# UE specific files get tabs
+[*.{Build.cs,.Target.cs}]
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+[vsyntax.h]
+indent_style = space
+indent_size = 4
+tab_width = 4

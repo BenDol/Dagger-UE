@@ -8,12 +8,12 @@
  */
 class FDaggerGameModule : public FDefaultGameModuleImpl
 {
-	virtual void StartupModule() override
-	{
-	}
+    virtual void StartupModule() override
+    {
+    }
 
-	virtual void ShutdownModule() override
-	{
+    virtual void ShutdownModule() override
+    {
 	}
 };
 
