@@ -6,7 +6,7 @@
 #include "Development/DaggerPlatformEmulationSettings.h"
 #include "Engine/GameInstance.h"
 #include "Framework/Notifications/NotificationManager.h"
-#include "GameModes/DaggerWorldSettings.h"
+#include "World/DaggerWorldSettings.h"
 #include "Settings/ContentBrowserSettings.h"
 #include "Settings/LevelEditorPlaySettings.h"
 #include "Widgets/Notifications/SNotificationList.h"

@@ -10,7 +10,7 @@
 #include "Framework/Application/SlateApplication.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
 #include "GameEditorStyle.h"
-#include "GameModes/DaggerExperienceManager.h"
+#include "Experience/DaggerExperienceManager.h"
 #include "GameplayAbilitiesEditorModule.h"
 #include "GameplayCueInterface.h"
 #include "GameplayCueNotify_Burst.h"
