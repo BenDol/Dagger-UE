@@ -6,55 +6,48 @@ public class DaggerEditor : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        PublicIncludePaths.AddRange(
-            new string[] {
-                "DaggerEditor"
-            }
-        );
+        PublicIncludePaths.AddRange(new string[] {
+            "DaggerEditor"
+        });
 
-        PrivateIncludePaths.AddRange(
-            new string[] {
-            }
-        );
+        PrivateIncludePaths.AddRange(new string[] {
+            
+        });
 
-        PublicDependencyModuleNames.AddRange(
-            new string[] {
-                "Core",
-                "CoreUObject",
-                "Engine",
-                "EditorFramework",
-                "UnrealEd",
-                "PhysicsCore",
-                "GameplayTagsEditor",
-                "GameplayTasksEditor",
-                "GameplayAbilities",
-                "GameplayAbilitiesEditor",
-                "StudioTelemetry",
-                "DaggerGame",
-            }
-        );
+        PublicDependencyModuleNames.AddRange(new string[] {
+            "Core",
+            "CoreUObject",
+            "Engine",
+            "EditorFramework",
+            "UnrealEd",
+            "PhysicsCore",
+            "GameplayTagsEditor",
+            "GameplayTasksEditor",
+            "GameplayAbilities",
+            "GameplayAbilitiesEditor",
+            "StudioTelemetry",
+            "DaggerGame",
+        });
 
-        PrivateDependencyModuleNames.AddRange(
-            new string[] {
-                "InputCore",
-                "Slate",
-                "SlateCore",
-                "ToolMenus",
-                "EditorStyle",
-                "DataValidation",
-                "MessageLog",
-                "Projects",
-                "DeveloperToolSettings",
-                "CollectionManager",
-                "SourceControl",
-                "Chaos"
-            }
-        );
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "InputCore",
+            "Slate",
+            "SlateCore",
+            "ToolMenus",
+            "EditorStyle",
+            "DataValidation",
+            "MessageLog",
+            "Projects",
+            "DeveloperToolSettings",
+            "CollectionManager",
+            "SourceControl",
+            "Chaos"
+        });
 
-        DynamicallyLoadedModuleNames.AddRange(
-            new string[] {
-            }
-        );
+        DynamicallyLoadedModuleNames.AddRange(new string[] {
+            
+        });
+        
         // Basic setup for External RPC Framework.
         // Functionality within framework will be stripped in shipping to remove vulnerabilities.
         PrivateDependencyModuleNames.Add("ExternalRpcRegistry");

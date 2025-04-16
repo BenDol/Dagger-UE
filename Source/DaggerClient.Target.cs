@@ -10,6 +10,6 @@ public class DaggerClientTarget : TargetRules
 
         ExtraModuleNames.AddRange(new string[] { "DaggerGame" });
 
-        DaggerGameTarget.ApplySharedLyraTargetSettings(this);
+        DaggerGameTarget.ApplySharedDaggerTargetSettings(this);
     }
 }

@@ -21,12 +21,12 @@ public class DaggerGameTarget : TargetRules
             "DaggerGame"
         });
 
-		ApplySharedLyraTargetSettings(this);
+		ApplySharedDaggerTargetSettings(this);
 	}
 
 	private static bool bHasWarnedAboutShared = false;
 
-	internal static void ApplySharedLyraTargetSettings(TargetRules Target)
+	internal static void ApplySharedDaggerTargetSettings(TargetRules Target)
 	{
 		ILogger Logger = Target.Logger;
 		
@@ -92,7 +92,7 @@ public class DaggerGameTarget : TargetRules
 				if (!bHasWarnedAboutShared)
 				{
 					bHasWarnedAboutShared = true;
-					Logger.LogWarning("LyraGameEOS and dynamic target options are disabled when packaging from an installed version of the engine");
+					Logger.LogWarning("DaggerGameEOS and dynamic target options are disabled when packaging from an installed version of the engine");
 				}
 			}
 		}
