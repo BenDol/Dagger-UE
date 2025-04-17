@@ -214,6 +214,10 @@
 		{
 			"Name": "DaggerAudio",
 			"Enabled": true
+		},
+		{
+			"Name": "DaggerFeedback",
+			"Enabled": true
 		}
 	],
 	"AdditionalPluginDirectories": [

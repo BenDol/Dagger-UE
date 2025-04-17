@@ -39,10 +39,6 @@ public class DaggerGame : ModuleRules
 			"AsyncMixin",
 			"ControlFlows",
 			"PropertyPath",
-            "DaggerCharacter",
-            "DaggerHotfix",
-            "DaggerSettings",
-            "DaggerSystem"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {
@@ -59,7 +55,8 @@ public class DaggerGame : ModuleRules
 			"UMG",
 			"CommonUI",
 			"CommonInput",
-			"GameSettings",
+            "GameSettings",
+            "GameSettingsUI",
 			"CommonGame",
 			"CommonUser",
 			"GameSubtitles",
@@ -70,7 +67,22 @@ public class DaggerGame : ModuleRules
 			"ClientPilot",
 			"AudioModulation",
 			"EngineSettings",
+            "DTLSHandlerComponent",
 			"Json",
+            "DaggerCore",
+            "DaggerCharacter",
+            "DaggerCharacterUI",
+            "DaggerHotfix",
+            "DaggerSettings",
+            "DaggerSystem",
+            "DaggerActions",
+            "DaggerPerformance",
+            "DaggerCamera",
+            "DaggerAudio",
+            "DaggerFeedback",
+            "DaggerDefinitions",
+            "DaggerInput",
+            "DaggerUI",
 		});
 
 		DynamicallyLoadedModuleNames.AddRange(new string[] {

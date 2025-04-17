@@ -26,7 +26,7 @@ public class DaggerEditor : ModuleRules
             "GameplayAbilities",
             "GameplayAbilitiesEditor",
             "StudioTelemetry",
-            "DaggerGame",
+            "DaggerGame"
         });
 
         PrivateDependencyModuleNames.AddRange(new string[] {
@@ -41,7 +41,7 @@ public class DaggerEditor : ModuleRules
             "DeveloperToolSettings",
             "CollectionManager",
             "SourceControl",
-            "Chaos"
+            "Chaos",
         });
 
         DynamicallyLoadedModuleNames.AddRange(new string[] {

@@ -10,8 +10,8 @@
 /**
  * 
  */
-UCLASS()
-class DAGGERGAME_API UDaggerGameFeaturePolicy : public UDaggerGameFeaturePolicyBase
+UCLASS(MinimalAPI, Config = Game)
+class UDaggerGameFeaturePolicy : public UDaggerGameFeaturePolicyBase
 {
     GENERATED_BODY()
 

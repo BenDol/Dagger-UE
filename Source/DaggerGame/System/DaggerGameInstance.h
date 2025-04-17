@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "System/DaggerSystemGameInstance.h"
+#include "System/DaggerGameInstanceBase.h"
 
 #include "DaggerGameInstance.generated.h"
 
@@ -11,7 +11,7 @@
  * DaggerGameInstance is the game instance class for the Dagger game.
  */
 UCLASS()
-class DAGGERGAME_API UDaggerGameInstance : public UDaggerSystemGameInstance
+class DAGGERGAME_API UDaggerGameInstance : public UDaggerGameInstanceBase
 {
     GENERATED_BODY()
 
