@@ -26,7 +26,22 @@ public class DaggerEditor : ModuleRules
             "GameplayAbilities",
             "GameplayAbilitiesEditor",
             "StudioTelemetry",
-            "DaggerGame"
+            "DaggerCore",
+            "DaggerCharacter",
+            "DaggerCharacterUI",
+            "DaggerFeedback",
+            "DaggerPhysics",
+            "DaggerHotfix",
+            "DaggerSettings",
+            "DaggerSystem",
+            "DaggerActions",
+            "DaggerPerformance",
+            "DaggerCamera",
+            "DaggerAudio",
+            "DaggerDefinitions",
+            "DaggerInput",
+            "DaggerUI",
+            "DaggerGame",
         });
 
         PrivateDependencyModuleNames.AddRange(new string[] {
