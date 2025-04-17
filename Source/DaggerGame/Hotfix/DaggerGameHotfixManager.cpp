@@ -4,6 +4,8 @@
 
 #include "Settings/DaggerSettingsLocal.h"
 
+#include UE_INLINE_GENERATED_CPP_BY_NAME(DaggerGameHotfixManager)
+
 void UDaggerGameHotfixManager::OnHotfixDeviceProfileApplied()
 {
     Super::OnHotfixDeviceProfileApplied();

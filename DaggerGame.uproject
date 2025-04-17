@@ -156,10 +156,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "ShooterMaps",
-			"Enabled": true
-		},
-		{
 			"Name": "TopDownArena",
 			"Enabled": true
 		},
@@ -217,6 +213,10 @@
 		},
 		{
 			"Name": "DaggerFeedback",
+			"Enabled": true
+		},
+		{
+			"Name": "ShooterMaps",
 			"Enabled": true
 		}
 	],
