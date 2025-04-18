@@ -4,12 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameMode/DaggerGameModeBase.h"
+
 #include "DaggerGameMode.generated.h"
 
 /**
  * 
  */
-UCLASS()
+UCLASS(Config = Game, Meta = (ShortTooltip = "The base game mode class used by this project."), BlueprintType, Blueprintable)
 class DAGGERGAME_API ADaggerGameMode : public ADaggerGameModeBase
 {
     GENERATED_BODY()

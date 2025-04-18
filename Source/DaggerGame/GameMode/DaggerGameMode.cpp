@@ -3,6 +3,7 @@
 #include "DaggerGameMode.h"
 
 #include "Character/DaggerCharacter.h"
+#include "Character/UI/DaggerCharacterHUD.h"
 #include "Player/DaggerPlayerController.h"
 #include "Player/DaggerPlayerState.h"
 
@@ -13,4 +14,5 @@ ADaggerGameMode::ADaggerGameMode(const FObjectInitializer& ObjectInitializer)
     ReplaySpectatorPlayerControllerClass = ADaggerReplayPlayerController::StaticClass();
     PlayerStateClass = ADaggerPlayerState::StaticClass();
     DefaultPawnClass = ADaggerCharacter::StaticClass();
+    HUDClass = ADaggerCharacterHUD::StaticClass();
 }

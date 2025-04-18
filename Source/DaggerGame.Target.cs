@@ -73,7 +73,7 @@ public class DaggerGameTarget : TargetRules
 				Target.GlobalDefinitions.Add("UE_ASSETREGISTRY_INDIRECT_ASSETDATA_POINTERS=1");
 			}
 
-			ConfigureGameFeaturePlugins(Target);
+			//ConfigureGameFeaturePlugins(Target);
 		}
 		else
 		{
@@ -84,7 +84,7 @@ public class DaggerGameTarget : TargetRules
 			// This only works in editor or Unique build environments
 			if (Target.Type == TargetType.Editor)
 			{
-				ConfigureGameFeaturePlugins(Target);
+				//ConfigureGameFeaturePlugins(Target);
 			}
 			else
 			{
@@ -104,14 +104,14 @@ public class DaggerGameTarget : TargetRules
 		{
 			// With return true, editor builds will build all game feature plugins, but it may or may not load them all.
 			// This is so you can enable plugins in the editor without needing to compile code.
-			// return true;
+			return true;
 		}
 
 		bool bIsBuildMachine = (Environment.GetEnvironmentVariable("IsBuildMachine") == "1");
 		if (bIsBuildMachine)
 		{
 			// This could be used to enable all plugins for build machines
-			// return true;
+			return true;
 		}
 
 		// By default use the default plugin rules as set by the plugin browser in the editor
@@ -135,11 +135,17 @@ public class DaggerGameTarget : TargetRules
 		// Load all of the game feature .uplugin descriptors
 		List<FileReference> CombinedPluginList = new List<FileReference>();
 
-		List<DirectoryReference> GameFeaturePluginRoots = Unreal.GetExtensionDirs(Target.ProjectFile.Directory, Path.Combine("Plugins", "GameFeatures"));
+		List<DirectoryReference> GameFeaturePluginRoots = Unreal.GetExtensionDirs(Target.ProjectFile.Directory, Path.Combine("Engine", "DaggerEngine", "Plugins", "GameFeatures"));
 		foreach (DirectoryReference SearchDir in GameFeaturePluginRoots)
 		{
+            Logger.LogInformation("SearchDir: {}", SearchDir.FullName);
 			CombinedPluginList.AddRange(PluginsBase.EnumeratePlugins(SearchDir));
 		}
+        
+        Logger.LogInformation("CombinedPluginList:");
+        foreach (var PluginDir in CombinedPluginList) {
+            Logger.LogInformation("  PluginDir: {}", PluginDir.FullName);
+        }
 
 		if (CombinedPluginList.Count > 0)
 		{
@@ -213,11 +219,11 @@ public class DaggerGameTarget : TargetRules
 							{
 								// The plugin is for a specific branch, and this isn't it
 								bForceDisabled = true;
-								Logger.LogDebug("GameFeaturePlugin {Name} was marked as restricted to other branches. Disabling.", PluginFile.GetFileNameWithoutExtension());
+								Logger.LogInformation("GameFeaturePlugin {Name} was marked as restricted to other branches. Disabling.", PluginFile.GetFileNameWithoutExtension());
 							}
 							else
 							{
-								Logger.LogDebug("GameFeaturePlugin {Name} was marked as restricted to this branch. Leaving enabled.", PluginFile.GetFileNameWithoutExtension());
+								Logger.LogInformation("GameFeaturePlugin {Name} was marked as restricted to this branch. Leaving enabled.", PluginFile.GetFileNameWithoutExtension());
 							}
 						}
 
@@ -227,7 +233,7 @@ public class DaggerGameTarget : TargetRules
 						{
 							// This plugin was marked to never compile, so don't
 							bForceDisabled = true;
-							Logger.LogDebug("GameFeaturePlugin {Name} was marked as NeverBuild, disabling.", PluginFile.GetFileNameWithoutExtension());
+							Logger.LogInformation("GameFeaturePlugin {Name} was marked as NeverBuild, disabling.", PluginFile.GetFileNameWithoutExtension());
 						}
 
 						// Keep track of plugin references for validation later
@@ -266,15 +272,17 @@ public class DaggerGameTarget : TargetRules
 					}
 
 					// Print out the final decision for this plugin
-					Logger.LogDebug("ConfigureGameFeaturePlugins() has decided to {Action} feature {Name}", bEnabled ? "enable" : (bForceDisabled ? "disable" : "ignore"), PluginFile.GetFileNameWithoutExtension());
+					Logger.LogInformation("ConfigureGameFeaturePlugins() has decided to {Action} feature {Name}", bEnabled ? "enable" : (bForceDisabled ? "disable" : "ignore"), PluginFile.GetFileNameWithoutExtension());
 
 					// Enable or disable it
 					if (bEnabled)
 					{
+                        Logger.LogInformation("Enabling plugin {Name}", PluginFile.GetFileNameWithoutExtension());
 						Target.EnablePlugins.Add(PluginFile.GetFileNameWithoutExtension());
 					}
 					else if (bForceDisabled)
 					{
+                        Logger.LogInformation("Disabling plugin {Name}", PluginFile.GetFileNameWithoutExtension());
 						Target.DisablePlugins.Add(PluginFile.GetFileNameWithoutExtension());
 					}
 				}

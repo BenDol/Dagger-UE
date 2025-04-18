@@ -57,6 +57,7 @@ public class DaggerEditor : ModuleRules
             "CollectionManager",
             "SourceControl",
             "Chaos",
+            "DaggerGame",
         });
 
         DynamicallyLoadedModuleNames.AddRange(new string[] {
