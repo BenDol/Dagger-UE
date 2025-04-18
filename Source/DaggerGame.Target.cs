@@ -73,7 +73,7 @@ public class DaggerGameTarget : TargetRules
 				Target.GlobalDefinitions.Add("UE_ASSETREGISTRY_INDIRECT_ASSETDATA_POINTERS=1");
 			}
 
-			//ConfigureGameFeaturePlugins(Target);
+			ConfigureGameFeaturePlugins(Target);
 		}
 		else
 		{
@@ -84,7 +84,7 @@ public class DaggerGameTarget : TargetRules
 			// This only works in editor or Unique build environments
 			if (Target.Type == TargetType.Editor)
 			{
-				//ConfigureGameFeaturePlugins(Target);
+				ConfigureGameFeaturePlugins(Target);
 			}
 			else
 			{
@@ -104,14 +104,14 @@ public class DaggerGameTarget : TargetRules
 		{
 			// With return true, editor builds will build all game feature plugins, but it may or may not load them all.
 			// This is so you can enable plugins in the editor without needing to compile code.
-			return true;
+			// return true;
 		}
 
 		bool bIsBuildMachine = (Environment.GetEnvironmentVariable("IsBuildMachine") == "1");
 		if (bIsBuildMachine)
 		{
 			// This could be used to enable all plugins for build machines
-			return true;
+			// return true;
 		}
 
 		// By default use the default plugin rules as set by the plugin browser in the editor
@@ -136,13 +136,15 @@ public class DaggerGameTarget : TargetRules
 		List<FileReference> CombinedPluginList = new List<FileReference>();
 
 		List<DirectoryReference> GameFeaturePluginRoots = Unreal.GetExtensionDirs(Target.ProjectFile.Directory, Path.Combine("Engine", "DaggerEngine", "Plugins", "GameFeatures"));
-		foreach (DirectoryReference SearchDir in GameFeaturePluginRoots)
+        GameFeaturePluginRoots.AddRange(Unreal.GetExtensionDirs(Target.ProjectFile.Directory, Path.Combine("Plugins", "GameFeatures")));
+        
+        foreach (DirectoryReference SearchDir in GameFeaturePluginRoots)
 		{
             Logger.LogInformation("SearchDir: {}", SearchDir.FullName);
 			CombinedPluginList.AddRange(PluginsBase.EnumeratePlugins(SearchDir));
 		}
         
-        Logger.LogInformation("CombinedPluginList:");
+        Logger.LogInformation("PluginList:");
         foreach (var PluginDir in CombinedPluginList) {
             Logger.LogInformation("  PluginDir: {}", PluginDir.FullName);
         }
