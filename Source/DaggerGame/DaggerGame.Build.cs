@@ -39,6 +39,8 @@ public class DaggerGame : ModuleRules
 			"AsyncMixin",
 			"ControlFlows",
 			"PropertyPath",
+            "GameSettings",
+            "GameSettingsUI",
             "DaggerCore",
             "DaggerCharacter",
             "DaggerCharacterUI",

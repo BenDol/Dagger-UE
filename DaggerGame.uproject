@@ -22,10 +22,7 @@
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
+			"Enabled": true
 		},
 		{
 			"Name": "PocketWorlds",
@@ -119,6 +116,17 @@
 			"Name": "SignificanceManager",
 			"Enabled": true
 		},
+    {
+      "Name": "WinDualShock",
+      "Enabled": true,
+      "SupportedTargetPlatforms": [
+        "Win64"
+      ]
+    },
+    {
+      "Name": "EnhancedInput",
+      "Enabled": true
+    },
 		{
 			"Name": "Gauntlet",
 			"Enabled": true
@@ -174,6 +182,62 @@
     {
       "Name": "FunctionalTestingEditor",
       "Enabled": true
+    },
+    {
+      "Name": "GeometryScripting",
+      "Enabled": true
+    },
+    {
+      "Name": "AnimationLocomotionLibrary",
+      "Enabled": true
+    },
+    {
+      "Name": "AnimationWarping",
+      "Enabled": true
+    },
+    {
+      "Name": "MovieRenderPipeline",
+      "Enabled": true
+    },
+    {
+      "Name": "MoviePipelineMaskRenderPass",
+      "Enabled": true
+    },
+    {
+      "Name": "AssetReferenceRestrictions",
+      "Enabled": true
+    },
+    {
+      "Name": "SteamSockets",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineSubsystemSteam",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineSubsystemEOS",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineServicesEOS",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineServicesNull",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineServicesOSSAdapter",
+      "Enabled": true
+    },
+    {
+      "Name": "OpenXREyeTracker",
+      "Enabled": false
+    },
+    {
+      "Name": "OpenXRHandTracking",
+      "Enabled": false
     },
 		{
 			"Name": "DaggerCore",

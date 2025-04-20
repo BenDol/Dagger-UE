@@ -26,6 +26,8 @@ public class DaggerEditor : ModuleRules
             "GameplayAbilities",
             "GameplayAbilitiesEditor",
             "StudioTelemetry",
+            "GameSettings",
+            "GameSettingsUI",
             "DaggerCore",
             "DaggerCharacter",
             "DaggerCharacterUI",
@@ -57,6 +59,8 @@ public class DaggerEditor : ModuleRules
             "CollectionManager",
             "SourceControl",
             "Chaos",
+            "GameSettings",
+            "GameSettingsUI",
             "DaggerGame",
         });
 
