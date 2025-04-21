@@ -1,13 +1,14 @@
 ﻿using UnrealBuildTool;
 
-public class DaggerEditor : ModuleRules
+public class DaggerGameEditor : ModuleRules
 {
-    public DaggerEditor(ReadOnlyTargetRules Target) : base(Target)
+    public DaggerGameEditor(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
         PublicIncludePaths.AddRange(new string[] {
-            "DaggerEditor"
+            "DaggerEditor",
+            "DaggerGameEditor"
         });
 
         PrivateIncludePaths.AddRange(new string[] {
@@ -28,6 +29,7 @@ public class DaggerEditor : ModuleRules
             "StudioTelemetry",
             "GameSettings",
             "GameSettingsUI",
+            "DaggerEditor",
             "DaggerCore",
             "DaggerCharacter",
             "DaggerCharacterUI",
@@ -62,6 +64,7 @@ public class DaggerEditor : ModuleRules
             "GameSettings",
             "GameSettingsUI",
             "DaggerGame",
+            "DaggerEditor",
         });
 
         DynamicallyLoadedModuleNames.AddRange(new string[] {

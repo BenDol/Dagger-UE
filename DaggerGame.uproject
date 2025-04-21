@@ -14,9 +14,12 @@
 			]
 		},
 		{
-			"Name": "DaggerEditor",
+			"Name": "DaggerGameEditor",
 			"Type": "Editor",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "DaggerEditor"
+      ]
 		}
 	],
 	"Plugins": [
@@ -282,8 +285,12 @@
 		{
 			"Name": "DaggerFeedback",
 			"Enabled": true
-		}
-	],
+		},
+    {
+      "Name": "DaggerEditor",
+      "Enabled": true
+    }
+  ],
 	"AdditionalPluginDirectories": [
 		"Engine/DaggerEngine/Plugins"
 	]
