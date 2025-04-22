@@ -10,7 +10,7 @@ public class DaggerGame : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] {
 			"DaggerGame"
-		}); 
+        }); 
 
 		PrivateIncludePaths.AddRange(new string[] {
             
@@ -41,6 +41,7 @@ public class DaggerGame : ModuleRules
 			"PropertyPath",
             "GameSettings",
             "GameSettingsUI",
+            "DaggerBuildTools",
             "DaggerCore",
             "DaggerCharacter",
             "DaggerCharacterUI",

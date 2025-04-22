@@ -7,7 +7,6 @@ public class DaggerGameEditor : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
         PublicIncludePaths.AddRange(new string[] {
-            "DaggerEditor",
             "DaggerGameEditor"
         });
 

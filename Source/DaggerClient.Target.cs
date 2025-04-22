@@ -1,15 +1,15 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using DaggerBuildTool;
 using UnrealBuildTool;
 
-public class DaggerClientTarget : TargetRules
+public class DaggerClientTarget : DaggerClientTargetRulesBase
 {
-    public DaggerClientTarget( TargetInfo Target) : base(Target)
+    public DaggerClientTarget( TargetInfo Target) : base(Target, "DaggerClient",
+        rules => {
+            rules.ExtraModuleNames.AddRange(new string[] { "DaggerGame" });
+        })
     {
-        Type = TargetType.Client;
-
-        ExtraModuleNames.AddRange(new string[] { "DaggerGame" });
-
-        DaggerGameTarget.ApplySharedDaggerTargetSettings(this);
+        //
     }
 }

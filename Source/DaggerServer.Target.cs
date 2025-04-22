@@ -1,18 +1,16 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using DaggerBuildTool;
 using UnrealBuildTool;
 
 [SupportedPlatforms(UnrealPlatformClass.Server)]
-public class DaggerServerTarget : TargetRules
+public class DaggerServerTarget : DaggerServerTargetRulesBase
 {
-	public DaggerServerTarget(TargetInfo Target) : base(Target)
+	public DaggerServerTarget(TargetInfo Target) : base(Target, "DaggerServer", 
+        rules => {
+            rules.ExtraModuleNames.AddRange(new string[] { "DaggerGame" });
+        })
 	{
-		Type = TargetType.Server;
-
-		ExtraModuleNames.AddRange(new string[] { "DaggerGame" });
-
-		DaggerGameTarget.ApplySharedDaggerTargetSettings(this);
-
 		bUseChecksInShipping = true;
 	}
 }
